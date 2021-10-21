@@ -1,0 +1,9 @@
+CC=gcc
+CFLAGS=-c -g
+
+final:main.o addition.o
+	$(CC) $^ -o $@
+%.o:%.c
+	$(CC) $(CFLAGS) $^
+clean:
+	rm *.o
